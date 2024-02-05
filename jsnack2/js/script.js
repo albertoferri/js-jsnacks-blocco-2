@@ -9,11 +9,12 @@ const numeroSegreto = Math.floor(Math.random() * 100) + 1;
 console.log("numero da indovinare: " + numeroSegreto);
 
 let userNumber = 0;
+let tentativi = 0;
 while (userNumber != numeroSegreto){
-    let tentativi = 0;
     tentativi++
     console.log(tentativi);
 
+    // Il programma poi deve far comparire un messaggio "il numero è troppo alto" oppure "il numero è troppo basso" 
     userNumber = prompt("inserisci un numero");
     if (userNumber > numeroSegreto) {
         alert("Il numero è troppo alto. Prova di nuovo.")
@@ -21,6 +22,6 @@ while (userNumber != numeroSegreto){
         alert("Il numero è troppo basso. Prova di nuovo.")
     }
 
+    document.getElementById("num").innerHTML = "BRAVO HAI INDOVINATO IL NUMERO VINCENTE: " + numeroSegreto + " IN " + tentativi + " TENTATIVI";
 }
 document.getElementById("title").innerHTML = "GUESS THE NUMBER"
-document.getElementById("num").innerHTML = "BRAVO HAI INDOVINATO IL NUMERO VINCENTE: " + numeroSegreto;
