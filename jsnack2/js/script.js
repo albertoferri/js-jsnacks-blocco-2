@@ -10,10 +10,12 @@ console.log("numero da indovinare: " + numeroSegreto);
 
 let userNumber = 0;
 while (userNumber != numeroSegreto){
+    let tentativi = 0;
+    tentativi++
+    console.log(tentativi);
 
     userNumber = prompt("inserisci un numero");
     if (userNumber > numeroSegreto) {
-        // tentativi++
         alert("Il numero è troppo alto. Prova di nuovo.")
     } else if (userNumber < numeroSegreto){
         alert("Il numero è troppo basso. Prova di nuovo.")
@@ -22,7 +24,3 @@ while (userNumber != numeroSegreto){
 }
 document.getElementById("title").innerHTML = "GUESS THE NUMBER"
 document.getElementById("num").innerHTML = "BRAVO HAI INDOVINATO IL NUMERO VINCENTE: " + numeroSegreto;
-// let tentativi = 0;
-
-
-// console.log(tentativi)
