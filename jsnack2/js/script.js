@@ -5,21 +5,24 @@
 // Quando l'utente trova il numero, fateglielo sapere!
 
 // Genera un numero casuale tra 1 e 100 dai indovinare
-const numeroSegreto = Math.floor(Math.random() * 10) + 1;
+const numeroSegreto = Math.floor(Math.random() * 100) + 1;
 console.log("numero da indovinare: " + numeroSegreto);
 
 let userNumber = 0;
 while (userNumber != numeroSegreto){
 
     userNumber = prompt("inserisci un numero");
+    if (userNumber > numeroSegreto) {
+        // tentativi++
+        alert("Il numero è troppo alto. Prova di nuovo.")
+    } else if (userNumber < numeroSegreto){
+        alert("Il numero è troppo basso. Prova di nuovo.")
+    }
 
 }
+document.getElementById("title").innerHTML = "GUESS THE NUMBER"
+document.getElementById("num").innerHTML = "BRAVO HAI INDOVINATO IL NUMERO VINCENTE: " + numeroSegreto;
+// let tentativi = 0;
 
-alert("BRAVO HAI INDOVINATO IL NUMERO!!!!");
-let tentativi = 0;
 
-if (userNumber != numeroSegreto) {
-    tentativi++
-}
-
-console.log(tentativi)
+// console.log(tentativi)
