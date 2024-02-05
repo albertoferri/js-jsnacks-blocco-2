@@ -8,10 +8,10 @@ let numberArray = [];
 let somma = 0;
 
 // imposto ciclo while per chiedere un numero finche non raggiunge 50
-while (sum < 50){
+while (somma < 50){
   let userInput = Number(prompt("Enter a number:"));
 
-//   controllo che il numero inserito sia corretto
+// controllo che il numero inserito sia corretto
   if (!isNaN(userInput)) {
     // se è corretto --> nell'array
     numberArray.push(userInput);
@@ -21,7 +21,8 @@ while (sum < 50){
     for (let i = 0; i < numberArray.length; i++) {
       somma += numberArray[i];
     }
-    }else{
+
+    } else{
     alert("Inserisci un numero corretto.");
   }
 }
