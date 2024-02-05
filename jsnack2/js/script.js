@@ -5,8 +5,21 @@
 // Quando l'utente trova il numero, fateglielo sapere!
 
 // Genera un numero casuale tra 1 e 100 dai indovinare
-const numeroSegreto = Math.floor(Math.random() * 100) + 1;
+const numeroSegreto = Math.floor(Math.random() * 10) + 1;
 console.log("numero da indovinare: " + numeroSegreto);
 
-// setto variabile tentativi = 0 per tenere traccia dei tentativi effettuati
+let userNumber = 0;
+while (userNumber != numeroSegreto){
+
+    userNumber = prompt("inserisci un numero");
+
+}
+
+alert("BRAVO HAI INDOVINATO IL NUMERO!!!!");
 let tentativi = 0;
+
+if (userNumber != numeroSegreto) {
+    tentativi++
+}
+
+console.log(tentativi)
