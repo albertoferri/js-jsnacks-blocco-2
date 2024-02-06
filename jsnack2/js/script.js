@@ -8,8 +8,11 @@
 const numeroSegreto = Math.floor(Math.random() * 100) + 1;
 console.log("numero da indovinare: " + numeroSegreto);
 
+// setto variabili a 0
 let userNumber = 0;
 let tentativi = 0;
+
+// imposto ciclo while
 while (userNumber != numeroSegreto){
     tentativi++
     console.log(tentativi);
